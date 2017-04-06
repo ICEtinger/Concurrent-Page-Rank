@@ -74,28 +74,34 @@ public class PageRank implements Runnable{
 		// if STOP[] == true, the threads created should stop running.
     	boolean[] STOP = {false};
         
-        // aims at distributing nodes to threads so all of them have nearly same number of edges in their nodes, 
-        // so they should take nearly the same amount of time to run.
-        int NumberOfEdgesPerThread = totalNumberOfEdges/numberOfConcurrentThreads;
+    	// transforms the collection of addresses into an array to distribute them to threads.
+		ArrayList<Node> arrayOfNodes = new ArrayList<Node>(dic.values());
+    	
+    	if (totalNumberOfEdges == 1) {
+    		new Thread(new Iterate(arrayOfNodes, 0, arrayOfNodes.size(), numberOfIterations, DampingFactor, 
+    				neighborCentralityDampingFactor, neighborCentralityBias, STOP, totalNumberOfEdges, type)).start();
+    	}
+    	else {
+    		// aims at distributing nodes to threads so all of them have nearly same number of edges in their nodes, 
+    		// so they should take nearly the same amount of time to run.
+    		int NumberOfEdgesPerThread = totalNumberOfEdges/numberOfConcurrentThreads;
         
-        // transforms the collection of addresses into an array to distribute them to threads.
-        ArrayList<Node> arrayOfNodes = new ArrayList<Node>(dic.values());
-        
-        // distributes the addresses to threads to have their centrality calculated through multiple iterations.
-        int edgesInThread = 0;
-        int beginIndex = 0;
-        for ( int i = 0; i < arrayOfNodes.size(); i++ ) {
-        	edgesInThread += arrayOfNodes.get(i).fromNodes.size();
-        	if( edgesInThread >= NumberOfEdgesPerThread ) {
-        		new Thread(new Iterate(arrayOfNodes, beginIndex, i, numberOfIterations, DampingFactor, neighborCentralityDampingFactor, 
-        				neighborCentralityBias, STOP, totalNumberOfEdges, type)).start();
-        		beginIndex = i;
-        		edgesInThread = 0;
-        	}
-        }
-        new Thread(new Iterate(arrayOfNodes, beginIndex, arrayOfNodes.size(), numberOfIterations, DampingFactor, neighborCentralityDampingFactor, 
-				neighborCentralityBias, STOP, totalNumberOfEdges, type)).start();
-  
+    		// distributes the addresses to threads to have their centrality calculated through multiple iterations.
+    		int edgesInThread = 0;
+    		int beginIndex = 0;
+    		for ( int i = 0; i < arrayOfNodes.size(); i++ ) {
+    			edgesInThread += arrayOfNodes.get(i).fromNodes.size();
+    			if( edgesInThread >= NumberOfEdgesPerThread ) {
+    				new Thread(new Iterate(arrayOfNodes, beginIndex, i, numberOfIterations, DampingFactor, neighborCentralityDampingFactor, 
+    						neighborCentralityBias, STOP, totalNumberOfEdges, type)).start();
+    				beginIndex = i;
+    				edgesInThread = 0;
+    			}
+    		}
+    		new Thread(new Iterate(arrayOfNodes, beginIndex, arrayOfNodes.size(), numberOfIterations, DampingFactor, 
+    				neighborCentralityDampingFactor, neighborCentralityBias, STOP, totalNumberOfEdges, type)).start();
+    	}
+    	
         System.out.println(name+" Thread) running and reporting. Waiting "+timeBetweenAssessments+" miliseconds between each assessment.");
         
         // The program will stop running if it has for n consecutive assessments all improvements on centrality lower or equal to x,
