@@ -161,11 +161,11 @@ public class MainFunction {
     	
     	Thread[] rankers = new Thread[6];
     	
-    	if(writeStandard)							rankers[0] = rankerThread.apply(centralityType.standard, "Standard---");
-    	if(writeReversed)							rankers[1] = rankerThread.apply(centralityType.reversed, "Reversed---");
-    	if(writeNeighborCentrality)					rankers[2] = rankerThread.apply(centralityType.neighborCentrality, "Neighbor---");
-    	if(writeStandardUnweightedEdges)			rankers[3] = rankerThread.apply(centralityType.standardUnweightedEdges, "Standard UE");
-    	if(writeReversedUnweightedEdges)			rankers[4] = rankerThread.apply(centralityType.reversedUnweightedEdges, "Reversed UE");
+    	if(writeStandard)				rankers[0] = rankerThread.apply(centralityType.standard, "Standard---");
+    	if(writeReversed)				rankers[1] = rankerThread.apply(centralityType.reversed, "Reversed---");
+    	if(writeNeighborCentrality)			rankers[2] = rankerThread.apply(centralityType.neighborCentrality, "Neighbor---");
+    	if(writeStandardUnweightedEdges)		rankers[3] = rankerThread.apply(centralityType.standardUnweightedEdges, "Standard UE");
+    	if(writeReversedUnweightedEdges)		rankers[4] = rankerThread.apply(centralityType.reversedUnweightedEdges, "Reversed UE");
     	if(writeNeighborCentralityUnweightedEdges)	rankers[5] = rankerThread.apply(centralityType.neighborCentralityUnweightedEdges, "Neighbor UE");
     	
     	// starts all ranker threads at the same time.
