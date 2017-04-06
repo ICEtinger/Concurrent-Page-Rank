@@ -57,7 +57,8 @@ public class SingleThreadCSVMerger {
 		try (BufferedReader br = new BufferedReader(new FileReader(csvFile1))) {
 	    
 			while ( (line = br.readLine()) != null ) {
-				String[] beforeAfter = line.split(",",2); // splits the String into 2 Strings: before and after the first occurrence of ",".
+				// splits the String into 2 Strings: before and after the first occurrence of ",".
+				String[] beforeAfter = line.split(",",2);  
 				map1.put(beforeAfter[0], beforeAfter[1]);
 				LineCounter1++;	
 			}
@@ -68,7 +69,8 @@ public class SingleThreadCSVMerger {
 		try (BufferedReader br = new BufferedReader(new FileReader(csvFile2))) {
 			
 			while ( (line = br.readLine()) != null ) {
-				String[] beforeAfter = line.split(",",2); // splits the String into 2 Strings: before and after the first occurrence of ",".
+				// splits the String into 2 Strings: before and after the first occurrence of ",".
+				String[] beforeAfter = line.split(",",2);  
 				map2.put(beforeAfter[0], beforeAfter[1]);
 				LineCounter2++;	
 			}
@@ -77,12 +79,14 @@ public class SingleThreadCSVMerger {
 		
 		// prints the number of lines of each file.
 		System.out.println( LineCounter1 == LineCounter2 ? ("Both files have "+LineCounter1+" lines.") :
-														   ("file1 has "+LineCounter1+" lines, file2 has "+LineCounter2+".") );
+		                                                   ("file1 has "+LineCounter1+" lines, file2 has "+LineCounter2+".") );
 		
 		// merges the maps.
 		for ( String key : map1.keySet() ) {
 			//s1 = String mapped to key in map1. s2 = String mapped to key in map2. Sets s1 to s1+","+s2.
-			map1.merge(key, map2.get(key), (s1,s2) -> s1+","+s2 );
+			String tmp = map2.get(key);
+			if (tmp != null)
+				map1.merge(key, tmp, (s1,s2) -> s1+","+s2  );
 		}
 				
 		// write file.
