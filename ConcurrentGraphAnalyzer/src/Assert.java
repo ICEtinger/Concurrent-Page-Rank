@@ -9,7 +9,7 @@ Last updated April 2017.
 
 public class Assert {
 	
-	/**
+    /**
      * Checks if the condition is met. If it is not, it prints a specified error message in the console.
      *
      * @param condition the condition to be checked.
@@ -22,7 +22,7 @@ public class Assert {
 			System.out.println("Error in checking values: "+messageError);
 	}
 	
-	/**
+    /**
      * Checks if the condition is met. If it is not, it prints a error message in the console.
      *
      * @param condition the condition to be checked.
