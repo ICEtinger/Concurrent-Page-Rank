@@ -108,7 +108,7 @@ class IntFloat {
 
 public class getStatsFromCollection {
 	
-	/**
+    /**
      * Gets the statistical results specified by the boolean parameters.
      * Use with a function that returns a float. 
      * For a less verbose method, use getAllFloat or getMedianMeanStandardDeviationFloat. 
@@ -119,10 +119,10 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
-	 * 
-	 * @implNote Only statistical values specified in the parameters are calculated.
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
+     * 
+     * @implNote Only statistical values specified in the parameters are calculated.
      *
      */
 	static public <E> float[] getConditionalFloat(Collection<E> collection, Function<E,Float> function, boolean getMedian, boolean getMean,
@@ -135,7 +135,7 @@ public class getStatsFromCollection {
 		return getConditional(arr, getMedian, getMean, getStandardDeviation, getHarmonicMean, getMeanAbsoluteDeviation);
 	}
 	
-	/**
+    /**
      * Gets the statistical results specified by the boolean parameters.
      * Use with a function that returns a int. 
      * For a less verbose method, use getAllInt or getMedianMeanStandardDeviationInt. 
@@ -146,10 +146,10 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
-	 * 
-	 * @implNote Only statistical values specified in the parameters are calculated.
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
+     * 
+     * @implNote Only statistical values specified in the parameters are calculated.
      *
      */
 	static public <E> Int4Floats getConditionalInt(Collection<E> collection, Function<E,Integer> function, boolean getMedian, boolean getMean,
@@ -162,7 +162,7 @@ public class getStatsFromCollection {
 		return getConditional(arr, getMedian, getMean, getStandardDeviation, getHarmonicMean, getMeanAbsoluteDeviation);
 	}
 	
-	/**
+    /**
      * Gets the statistical results specified by the boolean parameters.
      * Use with a function that returns a double. 
      * For a less verbose method, use getAllDouble or getMedianMeanStandardDeviationDouble. 
@@ -173,10 +173,10 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
-	 * 
-	 * @implNote Only statistical values specified in the parameters are calculated.
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
+     * 
+     * @implNote Only statistical values specified in the parameters are calculated.
      *
      */
 	static public <E> double[] getConditionalDouble(Collection<E> collection, Function<E,Double> function, boolean getMedian, boolean getMean,
@@ -189,7 +189,7 @@ public class getStatsFromCollection {
 		return getConditional(arr, getMedian, getMean, getStandardDeviation, getHarmonicMean, getMeanAbsoluteDeviation);
 	}
 	
-	/**
+    /**
      * Gets the statistical results specified by the boolean parameters.
      * Use with a function that returns a long. 
      * For a less verbose method, use getAllLong or getMedianMeanStandardDeviationLong. 
@@ -200,10 +200,10 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
-	 * 
-	 * @implNote Only statistical values specified in the parameters are calculated.
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
+     * 
+     * @implNote Only statistical values specified in the parameters are calculated.
      *
      */
 	static public <E> Long4Floats getConditionalLong(Collection<E> collection, Function<E,Integer> function, boolean getMedian, boolean getMean,
@@ -216,7 +216,7 @@ public class getStatsFromCollection {
 		return getConditional(arr, getMedian, getMean, getStandardDeviation, getHarmonicMean, getMeanAbsoluteDeviation);
 	}
 	
-	/**
+    /**
      * Gets the statistical results specified by the boolean parameters.
      * For a less verbose method, use getAll or getMedianMeanStandardDeviation. 
      *
@@ -224,8 +224,8 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public float[] getConditional( float[] arr, boolean getMedian, boolean getMean,
@@ -240,7 +240,7 @@ public class getStatsFromCollection {
 		return tmp;
 	}
 	
-	/**
+    /**
      * Gets the statistical results specified by the boolean parameters.
      * For a less verbose method, use getAll or getMedianMeanStandardDeviation. 
      *
@@ -248,8 +248,8 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public Int4Floats getConditional( int[] arr, boolean getMedian, boolean getMean,
@@ -263,7 +263,7 @@ public class getStatsFromCollection {
 		return new Int4Floats( median, mean, standardDeviation, harmonicMean, meanAbsoluteDeviation );
 	}
 	
-	/**
+    /**
      * Gets the statistical results specified by the boolean parameters.
      * For a less verbose method, use getAll or getMedianMeanStandardDeviation. 
      *
@@ -271,8 +271,8 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public double[] getConditional( double[] arr, boolean getMedian, boolean getMean,
@@ -287,7 +287,7 @@ public class getStatsFromCollection {
 		return tmp;
 	}
 	
-	/**
+    /**
      * Gets the statistical results specified by the boolean parameters.
      * For a less verbose method, use getAll or getMedianMeanStandardDeviation. 
      *
@@ -295,8 +295,8 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public Long4Floats getConditional( long[] arr, boolean getMedian, boolean getMean,
@@ -310,7 +310,7 @@ public class getStatsFromCollection {
 		return new Long4Floats( median, mean, standardDeviation, harmonicMean, meanAbsoluteDeviation );
 	}
 
-	/**
+    /**
      * Gets all the statistical results at once.
      *
      * @param collection a Collection of E
@@ -319,8 +319,8 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public <E> float[] getAllFloat(Collection<E> collection, Function<E,Float> function) {
@@ -332,7 +332,7 @@ public class getStatsFromCollection {
 		return getAll(arr);
 	}
 	
-	/**
+    /**
      * Gets all the statistical results at once.
      *
      * @param collection a Collection of E
@@ -341,8 +341,8 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public <E> Long4Floats getAllInt(Collection<E> collection, Function<E,Integer> function) {
@@ -354,7 +354,7 @@ public class getStatsFromCollection {
 		return getAll(arr);
 	}
 	
-	/**
+    /**
      * Gets all the statistical results at once.
      *
      * @param collection a Collection of E
@@ -363,8 +363,8 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public <E> double[] getAllDouble(Collection<E> collection, Function<E,Double> function) {
@@ -376,7 +376,7 @@ public class getStatsFromCollection {
 		return getAll(arr);
 	}
 	
-	/**
+    /**
      * Gets all the statistical results at once.
      *
      * @param collection a Collection of E
@@ -385,8 +385,8 @@ public class getStatsFromCollection {
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public <E> Long4Floats getAllLong(Collection<E> collection, Function<E,Long> function) {
@@ -398,15 +398,15 @@ public class getStatsFromCollection {
 		return getAll(arr);
 	}
 	
-	/**
+    /**
      * Gets all the statistical results at once.
      *
      * @param arr the array from where to take the statistical results.
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public float[] getAll(float[] arr) {
@@ -415,15 +415,15 @@ public class getStatsFromCollection {
 		return tmp;
 	}
 	
-	/**
+    /**
      * Gets all the statistical results at once.
      *
      * @param arr the array from where to take the statistical results.
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public Long4Floats getAll(int[] arr) {
@@ -431,15 +431,15 @@ public class getStatsFromCollection {
 		return new Long4Floats(getMedian(arr), mean, getStandardDeviation(arr,mean), getHarmonicMean(arr), getMeanAbsoluteDeviation(arr,mean));
 	}
 	
-	/**
+    /**
      * Gets all the statistical results at once.
      *
      * @param arr the array from where to take the statistical results.
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public double[] getAll(double[] arr) {
@@ -448,15 +448,15 @@ public class getStatsFromCollection {
 		return tmp;
 	}
 	
-	/**
+    /**
      * Gets all the statistical results at once.
      *
      * @param arr the array from where to take the statistical results.
      *
      * @implNote Getting Median, Mean, Standard Deviation, Harmonic Mean, 
      * and Mean Absolute Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating 
-	 * the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating 
+     * the mean multiple times. 
      *
      */
 	static public Long4Floats getAll(long[] arr) {
@@ -464,7 +464,7 @@ public class getStatsFromCollection {
 		return new Long4Floats(getMedian(arr), mean, getStandardDeviation(arr,mean), getHarmonicMean(arr), getMeanAbsoluteDeviation(arr,mean));
 	}
 	
-	/**
+    /**
      * Gets the median, the mean and the standard deviation at once.
      *
      * @param collection a Collection of E
@@ -472,7 +472,7 @@ public class getStatsFromCollection {
      * @param function a Function that takes E as parameter and whose results of type float will be subject to statistical analysis.
      *
      * @implNote Getting Median, Mean and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
      *
      */
 	static public <E> float[] getMedianMeanStandardDeviationFloat(Collection<E> collection, Function<E,Float> function) {
@@ -484,7 +484,7 @@ public class getStatsFromCollection {
 		return getMedianMeanStandardDeviaton(arr);
 	}
 	
-	/**
+    /**
      * Gets the median, the mean and the standard deviation at once.
      *
      * @param collection a Collection of E
@@ -492,7 +492,7 @@ public class getStatsFromCollection {
      * @param function a Function that takes E as parameter and whose results of type int will be subject to statistical analysis.
      *
      * @implNote Getting Median, Mean and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
      *
      */
 	static public <E> IntFloatFloat getMedianMeanStandardDeviationInteger(Collection<E> collection, Function<E,Integer> function) {
@@ -504,7 +504,7 @@ public class getStatsFromCollection {
 		return getMedianMeanStandardDeviaton(arr);
 	}
 	
-	/**
+    /**
      * Gets the median, the mean and the standard deviation at once.
      *
      * @param collection a Collection of E
@@ -512,7 +512,7 @@ public class getStatsFromCollection {
      * @param function a Function that takes E as parameter and whose results of type long will be subject to statistical analysis.
      *
      * @implNote Getting Median, Mean and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
      *
      */
 	static public <E> LongFloatFloat getMedianMeanStandardDeviationLong(Collection<E> collection, Function<E,Long> function) {
@@ -524,7 +524,7 @@ public class getStatsFromCollection {
 		return getMedianMeanStandardDeviaton(arr);
 	}
 	
-	/**
+    /**
      * Gets the median, the mean and the standard deviation at once.
      *
      * @param collection a Collection of E
@@ -532,7 +532,7 @@ public class getStatsFromCollection {
      * @param function a Function that takes E as parameter and whose results of type double will be subject to statistical analysis.
      *
      * @implNote Getting Median, Mean and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
      *
      */
 	static public <E> double[] getMedianMeanStandardDeviationDouble(Collection<E> collection, Function<E,Double> function) {
@@ -544,14 +544,14 @@ public class getStatsFromCollection {
 		return getMedianMeanStandardDeviaton(arr);
 	}
 	
-	/**
+    /**
      * Gets the an array of size 3 with the values of 
      * { median(arr), mean(arr), standardDeviation(arr) }
      *
      * @param arr the array from where to take the statistical results.
      *
      * @implNote Getting Median, Mean and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
      *
      */
 	static public float[] getMedianMeanStandardDeviaton(float[] arr) {
@@ -559,28 +559,28 @@ public class getStatsFromCollection {
 		return tmp;
 	}
 	
-	/**
+    /**
      * Gets the an array of size 3 with the values of 
      * { median(arr), mean(arr), standardDeviation(arr) }
      *
      * @param arr the array from where to take the statistical results.
      *
      * @implNote Getting Median, Mean and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
      *
      */
 	static public IntFloatFloat getMedianMeanStandardDeviaton(int[] arr) {
 		return new IntFloatFloat ( getMedian(arr), getMean(arr), getStandardDeviation(arr) );
 	}
 	
-	/**
+    /**
      * Gets the an array of size 3 with the values of 
      * { median(arr), mean(arr), standardDeviation(arr) }
      *
      * @param arr the array from where to take the statistical results.
      *
      * @implNote Getting Median, Mean and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
      *
      */
 	static public double[] getMedianMeanStandardDeviaton(double[] arr) {
@@ -588,14 +588,14 @@ public class getStatsFromCollection {
 		return tmp;
 	}
 	
-	/**
+    /**
      * Gets the an array of size 3 with the values of 
      * { median(arr), mean(arr), standardDeviation(arr) }
      *
      * @param arr the array from where to take the statistical results.
      *
      * @implNote Getting Median, Mean and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
+     * Collection<E> collection to a newly created array and of calculating the mean multiple times. 
      *
      */
 	static public LongFloatFloat getMedianMeanStandardDeviaton(long[] arr) {
@@ -603,11 +603,11 @@ public class getStatsFromCollection {
 	}
 	
 	// gets the standard-deviation, defined by:
-	// sqrt( mean( (x[i] - mean(x[i]))² ) )
+	// sqrt( mean( (x[i] - mean(x[i]))Â² ) )
 	
-	/**
+    /**
      * Gets the standard-deviation, defined by:
-	 * sqrt( mean( (x[i] - mean(x[i]))² ) )
+	 * sqrt( mean( (x[i] - mean(x[i]))Â² ) )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -623,7 +623,7 @@ public class getStatsFromCollection {
 	
 	/**
      * Gets the standard-deviation, defined by:
-	 * sqrt( mean( (x[i] - mean(x[i]))² ) )
+	 * sqrt( mean( (x[i] - mean(x[i]))Â² ) )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -639,7 +639,7 @@ public class getStatsFromCollection {
 	
 	/**
      * Gets the standard-deviation, defined by:
-	 * sqrt( mean( (x[i] - mean(x[i]))² ) )
+	 * sqrt( mean( (x[i] - mean(x[i]))Â² ) )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -655,7 +655,7 @@ public class getStatsFromCollection {
 	
 	/**
      * Gets the standard-deviation, defined by:
-	 * sqrt( mean( (x[i] - mean(x[i]))² ) )
+	 * sqrt( mean( (x[i] - mean(x[i]))Â² ) )
      *
      * @param arr the array from where to take the statistical results.
      *
