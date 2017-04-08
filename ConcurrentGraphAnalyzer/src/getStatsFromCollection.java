@@ -602,12 +602,9 @@ public class getStatsFromCollection {
 		return new LongFloatFloat ( (int)getMedian(arr), getMean(arr), getStandardDeviation(arr) );
 	}
 	
-	// gets the standard-deviation, defined by:
-	// sqrt( mean( (x[i] - mean(x[i]))² ) )
-	
     /**
      * Gets the standard-deviation, defined by:
-	 * sqrt( mean( (x[i] - mean(x[i]))² ) )
+     * sqrt( mean( (x[i] - mean(x[i]))² ) )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -621,9 +618,9 @@ public class getStatsFromCollection {
 		return (float)Math.sqrt(tmp/arr.length);
 	}
 	
-	/**
+    /**
      * Gets the standard-deviation, defined by:
-	 * sqrt( mean( (x[i] - mean(x[i]))² ) )
+     * sqrt( mean( (x[i] - mean(x[i]))² ) )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -637,9 +634,9 @@ public class getStatsFromCollection {
 		return (float)Math.sqrt(tmp/arr.length);
 	}
 	
-	/**
+    /**
      * Gets the standard-deviation, defined by:
-	 * sqrt( mean( (x[i] - mean(x[i]))² ) )
+     * sqrt( mean( (x[i] - mean(x[i]))² ) )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -653,9 +650,9 @@ public class getStatsFromCollection {
 		return (float)Math.sqrt(tmp/arr.length);
 	}
 	
-	/**
+    /**
      * Gets the standard-deviation, defined by:
-	 * sqrt( mean( (x[i] - mean(x[i]))² ) )
+     * sqrt( mean( (x[i] - mean(x[i]))² ) )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -669,13 +666,13 @@ public class getStatsFromCollection {
 		return Math.sqrt(tmp/arr.length);
 	}
 	
-	// receives the already-calculated mean of the array as parameter to save the operations of calculating it,
-	// thus approximately halfing the number of required operations.
-	// this method is called when another method is called to calculate the standard deviation and the mean at once.
+    // receives the already-calculated mean of the array as parameter to save the operations of calculating it,
+    // thus approximately halfing the number of required operations.
+    // this method is called when another method is called to calculate the standard deviation and the mean at once.
 	
-	/**
+    /**
      * Receives the already-calculated mean of the array as parameter to save the operations of calculating it,
-	 * thus approximately halfing the number of required operations.
+     * thus approximately halfing the number of required operations.
      *
      * @param arr the array from where to take the statistical results.
      * @param mean the already-calculated mean of arr.
@@ -691,9 +688,9 @@ public class getStatsFromCollection {
 		return (float)Math.sqrt(tmp/arr.length);
 	}
 	
-	/**
+    /**
      * Receives the already-calculated mean of the array as parameter to save the operations of calculating it,
-	 * thus approximately halfing the number of required operations.
+     * thus approximately halfing the number of required operations.
      *
      * @param arr the array from where to take the statistical results.
      * @param mean the already-calculated mean of arr.
@@ -709,9 +706,9 @@ public class getStatsFromCollection {
 		return (float)Math.sqrt(tmp/arr.length);
 	}
 	
-	/**
+    /**
      * Receives the already-calculated mean of the array as parameter to save the operations of calculating it,
-	 * thus approximately halfing the number of required operations.
+     * thus approximately halfing the number of required operations.
      *
      * @param arr the array from where to take the statistical results.
      * @param mean the already-calculated mean of arr.
@@ -727,9 +724,9 @@ public class getStatsFromCollection {
 		return (float)Math.sqrt(tmp/arr.length);
 	}
 	
-	/**
+    /**
      * Receives the already-calculated mean of the array as parameter to save the operations of calculating it,
-	 * thus approximately halfing the number of required operations.
+     * thus approximately halfing the number of required operations.
      *
      * @param arr the array from where to take the statistical results.
      * @param mean the already-calculated mean of arr.
@@ -745,9 +742,9 @@ public class getStatsFromCollection {
 		return Math.sqrt(tmp/arr.length);
 	}
 	
-	/**
+    /**
      * Gets the Mean Absolute Deviation, defined by:
-	 * mean( | x[i] - mean(x[i]) | )
+     * mean( | x[i] - mean(x[i]) | )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -761,9 +758,9 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Gets the Mean Absolute Deviation, defined by:
-	 * mean( | x[i] - mean(x[i]) | )
+     * mean( | x[i] - mean(x[i]) | )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -777,9 +774,9 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Gets the Mean Absolute Deviation, defined by:
-	 * mean( | x[i] - mean(x[i]) | )
+     * mean( | x[i] - mean(x[i]) | )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -793,9 +790,9 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Gets the Mean Absolute Deviation, defined by:
-	 * mean( | x[i] - mean(x[i]) | )
+     * mean( | x[i] - mean(x[i]) | )
      *
      * @param arr the array from where to take the statistical results.
      *
@@ -809,9 +806,9 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Receives the already-calculated mean of the array as parameter to save the operations of calculating it,
-	 * thus approximately halfing the number of required operations.
+     * thus approximately halfing the number of required operations.
      *
      * @param arr the array from where to take the statistical results.
      * 
@@ -828,9 +825,9 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Receives the already-calculated mean of the array as parameter to save the operations of calculating it,
-	 * thus approximately halfing the number of required operations.
+     * thus approximately halfing the number of required operations.
      *
      * @param arr the array from where to take the statistical results.
      * 
@@ -847,9 +844,9 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Receives the already-calculated mean of the array as parameter to save the operations of calculating it,
-	 * thus approximately halfing the number of required operations.
+     * thus approximately halfing the number of required operations.
      *
      * @param arr the array from where to take the statistical results.
      * 
@@ -866,9 +863,9 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Receives the already-calculated mean of the array as parameter to save the operations of calculating it,
-	 * thus approximately halfing the number of required operations.
+     * thus approximately halfing the number of required operations.
      *
      * @param arr the array from where to take the statistical results.
      * 
@@ -885,7 +882,7 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Gets the median and the mean at once.
      *
      * @param collection a Collection of E
@@ -893,7 +890,7 @@ public class getStatsFromCollection {
      * @param function a Function that takes E as parameter and whose results of type double will be subject to statistical analysis.
      *
      * @implNote Getting Median and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array multiple times. 
+     * Collection<E> collection to a newly created array multiple times. 
      *
      */
 	static public <E> float[] getMedianAndMeanFloat(Collection<E> collection, Function<E,Float> function) {
@@ -905,7 +902,7 @@ public class getStatsFromCollection {
 		return getMedianAndMean(arr);
 	}
 	
-	/**
+    /**
      * Gets the median and the mean at once.
      *
      * @param collection a Collection of E
@@ -913,7 +910,7 @@ public class getStatsFromCollection {
      * @param function a Function that takes E as parameter and whose results of type double will be subject to statistical analysis.
      *
      * @implNote Getting Median and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array multiple times. 
+     * Collection<E> collection to a newly created array multiple times. 
      *
      */
 	static public <E> IntFloat getMedianAndMeanInt(Collection<E> collection, Function<E,Integer> function) {
@@ -925,7 +922,7 @@ public class getStatsFromCollection {
 		return getMedianAndMean(arr);
 	}
 	
-	/**
+    /**
      * Gets the median and the mean at once.
      *
      * @param collection a Collection of E
@@ -933,7 +930,7 @@ public class getStatsFromCollection {
      * @param function a Function that takes E as parameter and whose results of type double will be subject to statistical analysis.
      *
      * @implNote Getting Median and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array multiple times. 
+     * Collection<E> collection to a newly created array multiple times. 
      *
      */
 	static public <E> double[] getMedianAndMeanDouble(Collection<E> collection, Function<E,Double> function) {
@@ -945,7 +942,7 @@ public class getStatsFromCollection {
 		return getMedianAndMean(arr);
 	}
 	
-	/**
+    /**
      * Gets the median and the mean at once.
      *
      * @param collection a Collection of E
@@ -953,7 +950,7 @@ public class getStatsFromCollection {
      * @param function a Function that takes E as parameter and whose results of type double will be subject to statistical analysis.
      *
      * @implNote Getting Median and Standard Deviation at once is to save the work of copying 
-	 * Collection<E> collection to a newly created array multiple times. 
+     * Collection<E> collection to a newly created array multiple times. 
      *
      */
 	static public <E> LongFloat getMedianAndMeanLong(Collection<E> collection, Function<E,Long> function) {
@@ -965,7 +962,7 @@ public class getStatsFromCollection {
 		return getMedianAndMean(arr);
 	}
 	
-	/**
+    /**
      * Gets the median of the results of a Function over a Collection.
      *
      * @param collection a Collection of E
@@ -982,7 +979,7 @@ public class getStatsFromCollection {
 		return getMedian(arr);
 	}
 	
-	/**
+    /**
      * Gets the median of the results of a Function over a Collection.
      *
      * @param collection a Collection of E
@@ -999,7 +996,7 @@ public class getStatsFromCollection {
 		return getMedian(arr);
 	}
 	
-	/**
+    /**
      * Gets the median of the results of a Function over a Collection.
      *
      * @param collection a Collection of E
@@ -1016,7 +1013,7 @@ public class getStatsFromCollection {
 		return getMedian(arr);
 	}
 	
-	/**
+    /**
      * Gets the median of the results of a Function over a Collection.
      *
      * @param collection a Collection of E
@@ -1033,7 +1030,7 @@ public class getStatsFromCollection {
 		return getMedian(arr);
 	}
 	
-	/**
+    /**
      * Gets the mean of the results of a Function over a Collection.
      *
      * @param collection a Collection of E
@@ -1050,7 +1047,7 @@ public class getStatsFromCollection {
 		return getMean(arr);
 	}
 	
-	/**
+    /**
      * Gets the mean of the results of a Function over a Collection.
      *
      * @param collection a Collection of E
@@ -1067,7 +1064,7 @@ public class getStatsFromCollection {
 		return getMean(arr);
 	}
 	
-	/**
+    /**
      * Gets the mean of the results of a Function over a Collection.
      *
      * @param collection a Collection of E
@@ -1084,7 +1081,7 @@ public class getStatsFromCollection {
 		return getMean(arr);
 	}
 	
-	/**
+    /**
      * Gets the mean of the results of a Function over a Collection.
      *
      * @param collection a Collection of E
@@ -1101,7 +1098,7 @@ public class getStatsFromCollection {
 		return getMean(arr);
 	}
 	
-	/**
+    /**
      * Gets the median and the mean at once.
      *
      * @param arr the array from where to take the statistical results.
@@ -1112,7 +1109,7 @@ public class getStatsFromCollection {
 		return tmp;
 	}
 	
-	/**
+    /**
      * Gets the median and the mean at once.
      *
      * @param arr the array from where to take the statistical results.
@@ -1122,7 +1119,7 @@ public class getStatsFromCollection {
 		return new IntFloat( getMedian(arr), getMean(arr) );
 	}
 	
-	/**
+    /**
      * Gets the median and the mean at once.
      *
      * @param arr the array from where to take the statistical results.
@@ -1133,7 +1130,7 @@ public class getStatsFromCollection {
 		return tmp;
 	}
 	
-	/**
+    /**
      * Gets the median and the mean at once.
      *
      * @param arr the array from where to take the statistical results.
@@ -1144,7 +1141,7 @@ public class getStatsFromCollection {
 	}
 
 		
-	/**
+    /**
      * Gets the (k+1)th smallest element in arr.
      *
      * @param arr the array from where to select the element.
@@ -1156,7 +1153,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, 0, arr.length - 1, k);
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest element in arr.
      *
      * @param arr the array from where to select the element.
@@ -1168,7 +1165,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, 0, arr.length - 1, k);
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest element in arr.
      *
      * @param arr the array from where to select the element.
@@ -1180,7 +1177,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, 0, arr.length - 1, k);
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest element in arr.
      *
      * @param arr the array from where to select the element.
@@ -1192,7 +1189,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, 0, arr.length - 1, k);
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest number in the subarray arr[left <= i <= right]
      *
      * @param arr the array from where to select the element.
@@ -1219,7 +1216,7 @@ public class getStatsFromCollection {
 		}
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest number in the subarray arr[left <= i <= right]
      *
      * @param arr the array from where to select the element.
@@ -1246,7 +1243,7 @@ public class getStatsFromCollection {
 		}
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest number in the subarray arr[left <= i <= right]
      *
      * @param arr the array from where to select the element.
@@ -1273,7 +1270,7 @@ public class getStatsFromCollection {
 		}
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest number in the subarray arr[left <= i <= right]
      *
      * @param arr the array from where to select the element.
@@ -1300,7 +1297,7 @@ public class getStatsFromCollection {
 		}
 	}
 	
-	/**
+    /**
      * Partitions the array arr to be used in the QuickSelect method.
      * Private use only. Only used in the QuickSelect method.
      * 
@@ -1319,7 +1316,7 @@ public class getStatsFromCollection {
 		return storeIndex;
 	}
 	
-	/**
+    /**
      * Partitions the array arr to be used in the QuickSelect method.
      * Private use only. Only used in the QuickSelect method.
      * 
@@ -1338,7 +1335,7 @@ public class getStatsFromCollection {
 		return storeIndex;
 	}
 	
-	/**
+    /**
      * Partitions the array arr to be used in the QuickSelect method.
      * Private use only. Only used in the QuickSelect method.
      * 
@@ -1357,7 +1354,7 @@ public class getStatsFromCollection {
 		return storeIndex;
 	}
 	
-	/**
+    /**
      * Partitions the array arr to be used in the QuickSelect method.
      * Private use only. Only used in the QuickSelect method.
      * 
@@ -1376,7 +1373,7 @@ public class getStatsFromCollection {
 		return storeIndex;
 	}
 	
-	/**
+    /**
      * Swaps the position of the elements arr[a] and arr[b] in the array arr.
      * 
      */
@@ -1386,7 +1383,7 @@ public class getStatsFromCollection {
 		arr[b] = tmp;
 	}
 	
-	/**
+    /**
      * Swaps the position of the elements arr[a] and arr[b] in the array arr.
      * 
      */
@@ -1396,7 +1393,7 @@ public class getStatsFromCollection {
 		arr[b] = tmp;
 	}
 	
-	/**
+    /**
      * Swaps the position of the elements arr[a] and arr[b] in the array arr.
      * 
      */
@@ -1406,7 +1403,7 @@ public class getStatsFromCollection {
 		arr[b] = tmp;
 	}
 	
-	/**
+    /**
      * Swaps the position of the elements arr[a] and arr[b] in the array arr.
      * 
      */
@@ -1416,7 +1413,7 @@ public class getStatsFromCollection {
 		arr[b] = tmp;
 	}
 
-	/**
+    /**
      * Returns a random index between left and right, included.
      * 
      */
@@ -1424,7 +1421,7 @@ public class getStatsFromCollection {
 		return left + (int) Math.floor(Math.random() * (right - left + 1));
 	}
 	
-	/**
+    /**
      * Returns the median of the array arr.
      * 
      * @implNote uses the QuickSelect algorithm. 
@@ -1435,7 +1432,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, arr.length >>> 1);
 	}
 	
-	/**
+    /**
      * Returns the median of the array arr.
      * 
      * @implNote uses the QuickSelect algorithm. 
@@ -1446,7 +1443,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, arr.length >>> 1);
 	}
 	
-	/**
+    /**
      * Returns the median of the array arr.
      * 
      * @implNote uses the QuickSelect algorithm. 
@@ -1457,7 +1454,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, arr.length >>> 1);
 	}
 	
-	/**
+    /**
      * Returns the median of the array arr.
      * 
      * @implNote uses the QuickSelect algorithm. 
@@ -1468,7 +1465,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, arr.length >>> 1);
 	}
 	
-	/**
+    /**
      * Returns the mean of the array arr.
      * 
      */
@@ -1479,7 +1476,7 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Returns the mean of the array arr.
      * 
      */
@@ -1490,7 +1487,7 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Returns the mean of the array arr.
      * 
      */
@@ -1501,7 +1498,7 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Returns the mean of the array arr.
      * 
      */
@@ -1512,7 +1509,7 @@ public class getStatsFromCollection {
 		return tmp/arr.length;
 	}
 	
-	/**
+    /**
      * Returns the harmonic mean of the array arr.
      * 
      */
@@ -1526,7 +1523,7 @@ public class getStatsFromCollection {
 		return arr.length/tmp;
 	}
 	
-	/**
+    /**
      * Returns the harmonic mean of the array arr.
      * 
      */
@@ -1539,7 +1536,7 @@ public class getStatsFromCollection {
 		}return arr.length/tmp;
 	}
 	
-	/**
+    /**
      * Returns the harmonic mean of the array arr.
      * 
      */
@@ -1552,7 +1549,7 @@ public class getStatsFromCollection {
 		}return arr.length/tmp;
 	}
 	
-	/**
+    /**
      * Returns the harmonic mean of the array arr.
      * 
      */
@@ -1565,7 +1562,7 @@ public class getStatsFromCollection {
 		}return arr.length/tmp;
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest number in the results of a Function over a Collection. 
      * 
      * @param collection a collection on which to be applied the function.
@@ -1584,7 +1581,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, k);
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest number in the results of a Function over a Collection. 
      * 
      * @param collection a collection on which to be applied the function.
@@ -1603,7 +1600,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, k);
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest number in the results of a Function over a Collection. 
      * 
      * @param collection a collection on which to be applied the function.
@@ -1622,7 +1619,7 @@ public class getStatsFromCollection {
 		return QuickSelect(arr, k);
 	}
 	
-	/**
+    /**
      * Gets the (k+1)th smallest number in the results of a Function over a Collection. 
      * 
      * @param collection a collection on which to be applied the function.
