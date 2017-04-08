@@ -45,7 +45,7 @@ public class GraphWriter {
 	/////////////////////////////////   METHODS FOR WRITING BY NODES (EMAIL ADDRESSES)   ////////////////////////////////////////////////////
 	
 	
-	/**
+    /**
      * Creates and writes a CSV file containing the information of each Node in a given collection. 
      * Each boolean parameter represents whether or not its respective value should be written in the file.
      * The name of the file is the date and time it was created.
@@ -65,7 +65,7 @@ public class GraphWriter {
 				writeToNodes, "" );
 	}
 	
-	/**
+    /**
      * Creates and writes a CSV file containing the information of each Node in a given collection. 
      * Each boolean parameter represents whether or not its respective value should be written in the file.
      * Additionally, the name of the file created is further specified: it is the additionalFileName parameter followed by
@@ -102,14 +102,14 @@ public class GraphWriter {
             
             for (Node address : collectionOfNodes) {
             	writer.write( address.address);
-            	if (writeStandard)							writer.write( "," + address.getCentrality(centralityType.standard) );
-            	if (writeReversed)							writer.write( "," + address.getCentrality(centralityType.reversed) );
-            	if (writeNeighborCentrality)				writer.write( "," + address.getCentrality(centralityType.neighborCentrality) );
-            	if (writeStandardUnweightedEdges)			writer.write( "," + address.getCentrality(centralityType.standardUnweightedEdges) );
-            	if (writeReversedUnweightedEdges)			writer.write( "," + address.getCentrality(centralityType.reversedUnweightedEdges) );
+            	if (writeStandard)				writer.write( "," + address.getCentrality(centralityType.standard) );
+            	if (writeReversed)				writer.write( "," + address.getCentrality(centralityType.reversed) );
+            	if (writeNeighborCentrality)			writer.write( "," + address.getCentrality(centralityType.neighborCentrality) );
+            	if (writeStandardUnweightedEdges)		writer.write( "," + address.getCentrality(centralityType.standardUnweightedEdges) );
+            	if (writeReversedUnweightedEdges)		writer.write( "," + address.getCentrality(centralityType.reversedUnweightedEdges) );
             	if (writeNeighborCentralityUnweightedEdges)	writer.write( "," + address.getCentrality(centralityType.neighborCentralityUnweightedEdges) );
-            	if (writeInDegree)							writer.write( "," + address.inDegree() );
-            	if (writeOutDegree)							writer.write( "," + address.outDegree() );
+            	if (writeInDegree)				writer.write( "," + address.inDegree() );
+            	if (writeOutDegree)				writer.write( "," + address.outDegree() );
             	
             	if (writeFromNodes) {
             		writer.write(", received "+address.inDegree()+" emails from: ");
@@ -139,7 +139,7 @@ public class GraphWriter {
     
     }
     
-	/**
+    /**
      * Creates and writes a CSV file containing all the centrality values of each Node in a given collection. 
      * The name of the file is the date and time it was created.
      *
@@ -310,15 +310,14 @@ public class GraphWriter {
             	Node sender = emails.get(email).get(0);
             	if (writeSenderStandard)				writer.write( "," + sender.getCentrality(centralityType.standard) );
             	if (writeSenderReversed)				writer.write( "," + sender.getCentrality(centralityType.reversed) );
-            	if (writeSenderNeighborCentrality)		writer.write( "," + sender.getCentrality(centralityType.neighborCentrality) );
-            	if (writeSenderStandardUnweightedEdges)	writer.write( "," + sender.getCentrality(centralityType.standardUnweightedEdges) );
-            	if (writeSenderReversedUnweightedEdges)	writer.write( "," + sender.getCentrality(centralityType.reversedUnweightedEdges) );
-            	if (writeSenderNeighborCentralityUnweightedEdges)	writer.write( "," + 
-            														sender.getCentrality(centralityType.neighborCentralityUnweightedEdges) );
+            	if (writeSenderNeighborCentrality)			writer.write( "," + sender.getCentrality(centralityType.neighborCentrality) );
+            	if (writeSenderStandardUnweightedEdges)			writer.write( "," + sender.getCentrality(centralityType.standardUnweightedEdges) );
+            	if (writeSenderReversedUnweightedEdges)			writer.write( "," + sender.getCentrality(centralityType.reversedUnweightedEdges) );
+            	if (writeSenderNeighborCentralityUnweightedEdges)	writer.write( "," + sender.getCentrality(centralityType.neighborCentralityUnweightedEdges) );
             	if (writeSenderInDegree)				writer.write( "," + sender.inDegree() );
             	if (writeSenderOutDegree)				writer.write( "," + sender.outDegree() );
-            	if (writeSenderUnweightedInDegree)		writer.write( "," + sender.unweighedInDegree() );
-            	if (writeSenderUnweightedOutDegree)		writer.write( "," + sender.unweighedOutDegree() );
+            	if (writeSenderUnweightedInDegree)			writer.write( "," + sender.unweighedInDegree() );
+            	if (writeSenderUnweightedOutDegree)			writer.write( "," + sender.unweighedOutDegree() );
             	
             	// removes the sender so that the remaining Collection has only (and all) the Nodes RECEIVING the email. 
             	emails.get(email).remove(0);
@@ -335,11 +334,11 @@ public class GraphWriter {
 								} catch (IOException e) { e.printStackTrace(); }
             	};
             	
-            	if(writeStatsRecipientStandard)								write1.accept(centralityType.standard, writer);
-            	if(writeStatsRecipientReversed)								write1.accept(centralityType.reversed, writer);
-            	if(writeStatsRecipientNeighborCentrality)					write1.accept(centralityType.neighborCentrality, writer);
-            	if(writeStatsRecipientStandardUnweightedEdges)				write1.accept(centralityType.standardUnweightedEdges, writer);
-            	if(writeStatsRecipientReversedUnweightedEdges)				write1.accept(centralityType.reversedUnweightedEdges, writer);
+            	if(writeStatsRecipientStandard)					write1.accept(centralityType.standard, writer);
+            	if(writeStatsRecipientReversed)					write1.accept(centralityType.reversed, writer);
+            	if(writeStatsRecipientNeighborCentrality)			write1.accept(centralityType.neighborCentrality, writer);
+            	if(writeStatsRecipientStandardUnweightedEdges)			write1.accept(centralityType.standardUnweightedEdges, writer);
+            	if(writeStatsRecipientReversedUnweightedEdges)			write1.accept(centralityType.reversedUnweightedEdges, writer);
             	if(writeStatsRecipientNeighborCentralityUnweightedEdges)	write1.accept(centralityType.neighborCentralityUnweightedEdges, writer);
             
             	// LAMBDA-function used the print the next 4 statistical results.
@@ -349,16 +348,16 @@ public class GraphWriter {
             		try {
             			if (tmp.median != -1)					Bwriter.write( "," + tmp.median );
             			if (tmp.mean != -1)					Bwriter.write( "," + tmp.mean );
-            			if (tmp.standardDeviation != -1)		Bwriter.write( "," + tmp.standardDeviation );
+            			if (tmp.standardDeviation != -1)			Bwriter.write( "," + tmp.standardDeviation );
             			if (tmp.harmonicMean != -1)				Bwriter.write( "," + tmp.harmonicMean );
-            			if (tmp.meanAbsoluteDeviation != -1)	Bwriter.write( "," + tmp.meanAbsoluteDeviation );
+            			if (tmp.meanAbsoluteDeviation != -1)			Bwriter.write( "," + tmp.meanAbsoluteDeviation );
             		} catch (IOException e) {}
             	};
             	
             	if(writeStatsRecipientInDegree)					write2.accept(n -> n.inDegree(), writer);
             	if(writeStatsRecipientOutDegree)				write2.accept(n -> n.outDegree(), writer);
-            	if(writeStatsRecipientUnweightedInDegree)		write2.accept(n -> n.unweighedInDegree(), writer);
-            	if(writeStatsRecipientUnweightedOutDegree)		write2.accept(n -> n.unweighedOutDegree(), writer);
+            	if(writeStatsRecipientUnweightedInDegree)			write2.accept(n -> n.unweighedInDegree(), writer);
+            	if(writeStatsRecipientUnweightedOutDegree)			write2.accept(n -> n.unweighedOutDegree(), writer);
             	
             	// adds the sender back to the List of Nodes in the email, in the start of the List.
             	emails.get(email).add(0, sender);
