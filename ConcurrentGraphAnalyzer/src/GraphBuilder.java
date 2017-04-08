@@ -28,7 +28,7 @@ import java.util.Map;
 
 public class GraphBuilder {
 
-	/**
+    /**
      * Reads a CSV file and builds a graph from it. 
      * The form of the CSV file is: each line = "email identifier, ?, email address, from/to/cc", that indicates the email "email identifier"
      * is sent from (if from) or to (if to/cc) the email address "email address".
@@ -143,8 +143,8 @@ public class GraphBuilder {
         
 	}
 	
-	/**
-	 * Reads a CSV file and builds a graph from it. 
+    /**
+     * Reads a CSV file and builds a graph from it. 
      * The form of the CSV file is: each line = "email identifier, ?, email address, from/to/cc", that indicates the email "email identifier"
      * is sent from (if from) or to (if to/cc) the email address "email address".
      *
