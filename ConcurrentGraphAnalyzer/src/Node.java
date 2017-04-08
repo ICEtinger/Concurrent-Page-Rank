@@ -53,7 +53,7 @@ public class Node {
 		// METHODS ///////////////////////////////////////////////////////////////////////////////////////////
 		
 		
-		/**
+	    /**
 	     * Sorts a array of Nodes by a given centrality type of its Nodes.
 	     *
 	     * @param arr the array to be sorted.
@@ -78,7 +78,7 @@ public class Node {
 		
 		}
 		
-		/**
+	    /**
 	     * Set a specified type of centrality.
 	     *
 	     * @param type the type of centrality to be set.
@@ -90,7 +90,7 @@ public class Node {
 			this.centrality[type.ordinal()] = centrality;
 		}
 		
-		/**
+	    /**
 	     * Set a specified type of centrality.
 	     *
 	     * @param type the type of centrality to be set.
@@ -102,7 +102,7 @@ public class Node {
 			this.centrality[type.ordinal()] = (float)centrality;
 		}
 		
-		/**
+	    /**
 	     * Gets a specified type of centrality.
 	     *
 	     * @param type the type of centrality to get.
@@ -112,7 +112,7 @@ public class Node {
 			return centrality[type.ordinal()];
 		}
 		
-		/**
+	    /**
 	     * Measures the relative improvement of the last assessment on a specified type of centrality.
 	     *
 	     * @param type the type of centrality to measure.
@@ -124,10 +124,10 @@ public class Node {
 			return tmp;
 		}
 		 
-		/**
+	    /**
 	     * Registers an additional mail being sent from this address to toAddress.
-		 * Creates another mapping if it is the first mail, otherwise increases by 1 the counting of emails.
-		 * Returns the previous number of emails sent from this address to toAddress, or null if there was none.
+	     * Creates another mapping if it is the first mail, otherwise increases by 1 the counting of emails.
+	     * Returns the previous number of emails sent from this address to toAddress, or null if there was none.
 	     *
 	     * @param toAddress the node to which the email is sent.
 	     * 
@@ -136,10 +136,10 @@ public class Node {
 			return toNodes.put(toAddress, toNodes.getOrDefault(toAddress, 0) + 1);
 		}
 		
-		/**
+	    /**
 	     * Registers an additional mail being sent to this address to fromAddress.
-		 * Creates another mapping if it is the first mail, otherwise increases by 1 the counting of emails.
-		 * Returns the previous number of emails sent from this address to toAddress, or null if there was none.
+	     * Creates another mapping if it is the first mail, otherwise increases by 1 the counting of emails.
+	     * Returns the previous number of emails sent from this address to toAddress, or null if there was none.
 	     *
 	     * @param fromAddress the node from which the email is sent.
 	     * 
@@ -148,7 +148,7 @@ public class Node {
 			return fromNodes.put(fromAddress, fromNodes.getOrDefault(fromAddress, 0) + 1);
 		}
 		
-		/**
+	    /**
 	     * Returns the total number of emails sent to this address.
 	     * 
 	     */
@@ -159,7 +159,7 @@ public class Node {
 			return tmp;
 		}
 
-		/**
+	    /**
 	     * Returns the total number of emails sent from this address.
 	     * 
 	     */
@@ -170,7 +170,7 @@ public class Node {
 			return tmp;
 		}
 		
-		/**
+	    /**
 	     * Returns the number of addresses that sent emails to this address.
 	     * 
 	     */
@@ -178,7 +178,7 @@ public class Node {
 			return fromNodes.size();
 		}
 		
-		/**
+	    /**
 	     * Returns the number of addresses that received emails from this address.
 	     * 
 	     */
