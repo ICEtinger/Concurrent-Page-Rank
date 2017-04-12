@@ -9,10 +9,11 @@ This class provides a Runnable that uses the Page Rank algorithm to calculate ce
 It receives a collection containing all the Nodes that should have their centralities calculated and one of the 6 types of centrality
 specified at centralityType.java to calculate (namely Standard, Reversed, Neighbor, and their versions with unweighted edges).
 
-It distributes the collection of Nodes received into subarrays and calls the Runnable in Iterate.java class to each one of them iterate over
-their respective subarray of Nodes. It then periodically measures the mean relative improvement on the centrality (since the last time it 
-was checked) over all nodes. And if that measure is below a specified value for a specified number of consecutive assessments, it causes
-the running Iterate threads to stop. This is due to the convergence of the centrality calculated at each iteration of the Page Rank algorithm.
+It distributes the collection of Nodes received into disjoint subarrays (each Node is contained by exactly 1 subarray),
+and calls the Runnable in Iterate.java class to each one of them iterate over their respective subarray of Nodes. It then periodically 
+measures the mean relative improvement on the centrality (since the last time it was checked) over all nodes. And if that measure is
+below a specified value for a specified number of consecutive assessments, it causesthe running Iterate threads to stop. This is due
+to the convergence of the centrality calculated at each iteration of the Page Rank algorithm.
 
 *******************/
 
