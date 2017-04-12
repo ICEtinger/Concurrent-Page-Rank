@@ -2,9 +2,13 @@
 
 This project contains classes to get statistical values from graphs. 
 The function main:
+
 • builds a graph from a CSV file (by calling the class GraphBuilder) that represent emails being sent between email addresses,
+
 • calculates up to 6 types of centrality (with class PageRank), 
+
 • calculates statistical values from the graph (with class getStatsFromCollection),
+
 • and prints the results in a CSV file (with class GraphWriter).
 
 The function main contains the parameters to specify which centrality types and which statistical values should be calculated, 
