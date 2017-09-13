@@ -1,5 +1,9 @@
 # Concurrent-Page-Rank
 
+A detailed documentation is provided on the main function of the project:
+https://github.com/ICEtinger/Concurrent-Page-Rank/blob/master/ConcurrentGraphAnalyzer/src/MainFunction.java
+Additionally, all parameters can be set there.
+
 This project contains classes to get statistical values from graphs. 
 The function main:
 
